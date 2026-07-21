@@ -1,0 +1,35 @@
+# Python virtual environments & bytecode
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build & packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing & type checks
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local tile output & dataset caches
+*.osm.pbf
+*.meta.json
+.cache/
+MeshOS-Tiles/
+tiles/
+config.yaml
+
+# IDE & system metadata
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo

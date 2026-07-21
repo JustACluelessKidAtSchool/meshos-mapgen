@@ -1,0 +1,28 @@
+# meshos-mapgen optimal configuration profile (<30 GB target for 32 GB SD cards)
+# Total Tiles: 1,214,809 (~23.17 GB uncompressed / ~16-18 GB with oxipng)
+
+style: osm-carto
+output: ~/MeshOS-Tiles
+threads: auto
+optimize_png: true
+
+regions:
+  # Regional overview covering all of New England
+  - name: new-england
+    zoom: 5-12
+
+  # Statewide Massachusetts coverage down to high-detail zoom 16
+  - name: massachusetts
+    zoom: 13-16
+
+  # Western Massachusetts extended deep zoom 17
+  - name: western-massachusetts
+    zoom: 17
+
+  # Southern Vermont detailed zoom 16-17
+  - name: southern-vermont
+    zoom: 16-17
+
+  # Southern New Hampshire detailed zoom 16-17
+  - name: southern-new-hampshire
+    zoom: 16-17
