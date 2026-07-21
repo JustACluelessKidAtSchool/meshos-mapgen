@@ -1,14 +1,17 @@
 """Unit tests for estimate engine."""
 
+from pathlib import Path
+
 from meshos_mapgen.config import MapGenConfig, RegionConfig
 from meshos_mapgen.estimate import estimate_config
 
 
-def test_estimate_config() -> None:
+def test_estimate_config(tmp_path: Path) -> None:
     config = MapGenConfig(
+        output=str(tmp_path / "tiles"),
         regions=[
             RegionConfig(name="western-massachusetts", zoom="5-6"),
-        ]
+        ],
     )
     est = estimate_config(config)
 
