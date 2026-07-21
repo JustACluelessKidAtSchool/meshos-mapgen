@@ -29,18 +29,24 @@ It automatically fetches Geofabrik OSM extracts, merges state PBF datasets, rend
 
 ### Installation
 
-Install via `pipx` directly from GitHub (recommended):
+**Via `uv` (Recommended / Fastest):**
+
+```bash
+uv tool install git+https://github.com/JustACluelessKidAtSchool/meshos-mapgen.git
+```
+
+**Via `pipx`:**
 
 ```bash
 pipx install git+https://github.com/JustACluelessKidAtSchool/meshos-mapgen.git
 ```
 
-Or install from source:
+**Or install from source:**
 
 ```bash
 git clone https://github.com/JustACluelessKidAtSchool/meshos-mapgen.git
 cd meshos-mapgen
-pip install .
+uv pip install .   # or pip install .
 ```
 
 ### Usage

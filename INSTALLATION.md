@@ -62,7 +62,19 @@ When running `meshos-mapgen build`, the tool automatically checks for missing na
 
 ## Installing `meshos-mapgen`
 
-### Option A: Via pipx from GitHub (Recommended)
+### Option A: Via uv (Recommended / Fastest)
+
+```bash
+uv tool install git+https://github.com/JustACluelessKidAtSchool/meshos-mapgen.git
+```
+
+To update in the future:
+
+```bash
+uv tool upgrade meshos-mapgen
+```
+
+### Option B: Via pipx
 
 ```bash
 pipx install git+https://github.com/JustACluelessKidAtSchool/meshos-mapgen.git
@@ -74,12 +86,12 @@ To update in the future:
 pipx upgrade meshos-mapgen
 ```
 
-### Option B: Installing from Source
+### Option C: Installing from Source
 
 ```bash
 git clone https://github.com/JustACluelessKidAtSchool/meshos-mapgen.git
 cd meshos-mapgen
-pip install -e .[dev]
+uv pip install .   # or pip install .
 ```
 
 Verify installation:
