@@ -69,11 +69,10 @@ def ensure_system_tool(
             console.print(f"[bold cyan]Installing {pkg_name} via {pkg_manager}...[/bold cyan]")
             try:
                 if pkg_manager == "apt-get":
-                    cmd_str = f"sudo apt-get install -y {pkg_name}"
-                    res = subprocess.run(cmd_str, shell=True)
+                    full_cmd = ["sudo", "apt-get", "install", "-y", pkg_name]
                 else:
                     full_cmd = [*cmd_prefix, pkg_name]
-                    res = subprocess.run(full_cmd)
+                res = subprocess.run(full_cmd)
 
                 if res.returncode == 0 and shutil.which(tool_name):
                     console.print(f"[bold green]Successfully installed {tool_name}![/bold green]")
